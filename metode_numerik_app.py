@@ -1,5 +1,3 @@
-import tkinter as tk
-from tkinter import messagebox
 import math
 
 # --- Validasi & Evaluasi Fungsi Tanpa Library Luar ---
