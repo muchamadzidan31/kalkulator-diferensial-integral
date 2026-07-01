@@ -38,7 +38,10 @@ def hitung_integral(func_str, a, b, n):
     h = (b - a) / n
     total_pias_tengah = 0
     for i in range(1, n):
-        x_i = a + i * h
+        # 💡 PERBAIKAN: Hitung posisi x_i langsung dari rasio pias 
+        # untuk menghindari akumulasi galat pembulatan biner
+        x_i = a + (i * (b - a) / n)
+        
         y_i = evaluasi_fungsi(func_str, x_i)
         if y_i is None:
             return None
